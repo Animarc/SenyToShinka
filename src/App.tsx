@@ -3,8 +3,18 @@ import { copy, type Language } from './content'
 
 const email = 'hello@senytoshinka.com'
 
+const getInitialLanguage = (): Language => {
+  const browserLanguages = navigator.languages.length > 0
+    ? navigator.languages
+    : [navigator.language]
+
+  return browserLanguages.some((browserLanguage) =>
+    browserLanguage.toLowerCase().startsWith('es'),
+  ) ? 'es' : 'ja'
+}
+
 function App() {
-  const [language, setLanguage] = useState<Language>('es')
+  const [language, setLanguage] = useState<Language>(getInitialLanguage)
   const [menuOpen, setMenuOpen] = useState(false)
   const t = copy[language]
 
