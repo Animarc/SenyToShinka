@@ -72,22 +72,9 @@ function App() {
         <section className="services section-pad" id="services">
           <div className="section-heading">
             <div className="section-label"><span>—</span><p className="kicker">{t.servicesKicker}</p></div>
-            <div className="section-copy">
-              <h2>{t.servicesTitle}</h2>
-              <p>{t.servicesIntro}</p>
-            </div>
-          </div>
-          <div className="service-list">
-            {t.services.map((service) => (
-              <article className="service" key={service.number}>
-                <span className="service-number">{service.number}</span>
-                <div><h3>{service.title}</h3><p>{service.body}</p></div>
-                <div className="tags">{service.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-              </article>
-            ))}
+            <h2>{t.servicesTitle}</h2>
           </div>
           <div className="engagement">
-            <p className="engagement-kicker">{t.engagementKicker}</p>
             <div className="engagement-options">
               {t.engagementOptions.map((option, index) => (
                 <article key={option.label}>
@@ -98,6 +85,15 @@ function App() {
                 </article>
               ))}
             </div>
+          </div>
+          <div className="service-list">
+            {t.services.map((service) => (
+              <article className="service" key={service.number}>
+                <span className="service-number">{service.number}</span>
+                <div><h3>{service.title}</h3><p>{service.body}</p></div>
+                <div className="tags">{service.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+              </article>
+            ))}
           </div>
         </section>
 

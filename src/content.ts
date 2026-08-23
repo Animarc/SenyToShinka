@@ -12,8 +12,6 @@ type Content = {
   metricLabels: string[]
   servicesKicker: string
   servicesTitle: string
-  servicesIntro: string
-  engagementKicker: string
   engagementOptions: { label: string; title: string; body: string }[]
   services: { number: string; title: string; body: string; tags: string[] }[]
   methodKicker: string
@@ -42,12 +40,10 @@ export const copy: Record<Language, Content> = {
     secondaryCta: 'Ver servicios',
     metricLabels: ['Visibilidad antes del cambio', 'Evolución sin big bang', 'Cobertura fuera de horario JP'],
     servicesKicker: 'Servicios · 01',
-    servicesTitle: 'Convertimos sistemas difíciles de cambiar en plataformas que pueden evolucionar.',
-    servicesIntro: 'Empezamos haciendo visible lo que hoy es incierto. A partir de ahí, reducimos deuda técnica y riesgo operativo con cuatro capacidades que funcionan juntas o de forma independiente.',
-    engagementKicker: 'Un partner. Dos formas de trabajar.',
+    servicesTitle: 'Una evolución.\nDos formas de empezar.',
     engagementOptions: [
-      { label: 'Pack integral', title: 'Todo el recorrido, un único equipo.', body: 'Combinamos renovación legacy, auditoría, arquitectura de observabilidad y cobertura SRE en un programa completo de transformación.' },
-      { label: 'Servicios independientes', title: 'Solo lo que necesitáis, cuando lo necesitáis.', body: 'Cada capacidad puede contratarse por separado, con objetivos, alcance y entregables propios, sin necesidad de asumir el programa completo.' },
+      { label: 'Pack completo', title: 'De legacy a observable.', body: 'Nos ocupamos del recorrido completo: auditoría, arquitectura, modernización y operación SRE. Un equipo, un roadmap y una transformación coordinada de principio a fin.' },
+      { label: 'A medida', title: 'Elige tu sabor.', body: 'Selecciona solo la capacidad que necesitas: renovar un servicio, auditar la observabilidad, rediseñar la arquitectura o ampliar la cobertura SRE.' },
     ],
     services: [
       { number: '01', title: 'Renovación de servicios legacy', body: 'Trazamos dependencias y comportamiento real para diseñar una migración incremental, reversible y alineada con el negocio.', tags: ['Discovery', 'Strangler pattern', 'Cloud readiness'] },
@@ -84,12 +80,10 @@ export const copy: Record<Language, Content> = {
     secondaryCta: 'サービスを見る',
     metricLabels: ['変更前に可視化', 'ビッグバンに頼らない進化', '日本の営業時間外をカバー'],
     servicesKicker: 'サービス · 01',
-    servicesTitle: '変えにくいシステムを、進化できるプラットフォームへ。',
-    servicesIntro: 'まず、見えないものを可視化します。その上で、技術的負債と運用リスクを減らす4つのケイパビリティを、一括でも個別でも提供します。',
-    engagementKicker: 'ひとつのパートナー。2つの支援形態。',
+    servicesTitle: 'ひとつの進化。\n2つの始め方。',
     engagementOptions: [
-      { label: '一括支援パッケージ', title: '変革の全工程を、ひとつのチームで。', body: 'レガシー刷新、監査、オブザーバビリティ設計、営業時間外SREを組み合わせ、包括的な変革プログラムとして提供します。' },
-      { label: '個別サービス', title: '必要なものを、必要なタイミングで。', body: '各サービスは個別に契約可能です。包括プログラムを前提とせず、それぞれに明確な目的、範囲、成果物を設定します。' },
+      { label: 'フルパッケージ', title: 'レガシーからオブザーバブルへ。', body: '監査、アーキテクチャ、モダナイゼーション、SRE運用までを一括支援。ひとつのチームとロードマップで、変革を最初から最後まで進めます。' },
+      { label: 'カスタム', title: '必要なサービスを選択。', body: 'サービス刷新、オブザーバビリティ監査、アーキテクチャ再設計、SREカバレッジから、必要なものだけを選べます。' },
     ],
     services: [
       { number: '01', title: 'レガシーサービスの刷新', body: '依存関係と実際の挙動を把握し、段階的でロールバック可能な移行を設計します。', tags: ['ディスカバリー', '段階的移行', 'クラウド対応'] },
