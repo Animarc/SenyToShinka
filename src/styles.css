@@ -20,7 +20,9 @@ button { font: inherit; }
 .language-switcher button.active { opacity:1; font-weight:600; }
 .menu-button { display:none; background:none; border:0; width:36px; height:36px; }
 .menu-button span { display:block; height:1px; background:var(--ink); margin:7px 0; }
-.hero { min-height:100svh; padding-top:clamp(132px, 18vh, 190px); padding-bottom:0; position:relative; display:flex; flex-direction:column; }
+.hero { min-height:100svh; padding-top:clamp(132px, 18vh, 190px); padding-bottom:0; position:relative; isolation:isolate; display:flex; flex-direction:column; }
+.hero::before { content:''; position:absolute; inset:0; z-index:-2; background:url('./assets/shinkansen-fuji-hero.png') center right / cover no-repeat; }
+.hero::after { content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg, rgba(242,239,232,.97) 0%, rgba(242,239,232,.91) 38%, rgba(242,239,232,.62) 68%, rgba(242,239,232,.18) 100%), linear-gradient(0deg, rgba(242,239,232,.82) 0%, transparent 38%); }
 .hero-grid { position:absolute; inset:88px 5vw 0 auto; width:36%; border-inline:1px solid rgba(23,34,29,.07); display:flex; justify-content:space-around; pointer-events:none; }
 .hero-grid span { height:100%; width:1px; background:rgba(23,34,29,.07); }
 .eyebrow,.kicker { text-transform:uppercase; font-size:11px; letter-spacing:.17em; font-weight:600; }
@@ -91,7 +93,7 @@ h1 em { font-family:'Playfair Display','Noto Sans JP',serif; color:var(--red); f
 .footer p { margin:0; opacity:.55; }.footer > span { opacity:.45; }.footer > a { text-decoration:underline; text-underline-offset:4px; }.brand-footer { font-size:14px; }
 @media (max-width: 850px) {
   .header { height:72px; position:absolute; }.menu-button { display:block; z-index:11; }.nav { display:none; position:absolute; inset:0; min-height:100vh; background:var(--paper); padding:110px 24px 40px; flex-direction:column; align-items:stretch; font-size:20px; }.nav.open { display:flex; }.language-switcher { padding:20px 0; font-size:14px; }.nav-cta { margin-top:auto; }
-  .hero { padding-top:130px; min-height:auto; }.hero-grid { display:none; }.hero-bottom,.section-heading,.service,.japan,.method-intro { grid-template-columns:1fr; }.hero-bottom { gap:32px; }.principles { grid-template-columns:1fr; margin-top:60px; }.principles div { border-right:0; border-bottom:1px solid rgba(23,34,29,.18); }.principles div:last-child { border:0; }
+  .hero { padding-top:130px; min-height:auto; }.hero::before { background-position:68% center; }.hero::after { background:linear-gradient(90deg, rgba(242,239,232,.97) 0%, rgba(242,239,232,.86) 72%, rgba(242,239,232,.55) 100%), linear-gradient(0deg, rgba(242,239,232,.94) 0%, rgba(242,239,232,.22) 70%); }.hero-grid { display:none; }.hero-bottom,.section-heading,.service,.japan,.method-intro { grid-template-columns:1fr; }.hero-bottom { gap:32px; }.principles { grid-template-columns:1fr; margin-top:60px; backdrop-filter:blur(8px); background:rgba(242,239,232,.66); }.principles div { border-right:0; border-bottom:1px solid rgba(23,34,29,.18); }.principles div:last-child { border:0; }
   .services,.method { padding-block:90px; }.section-heading { margin-bottom:55px; }.section-heading h2 { margin:15px 0; }.engagement { grid-template-columns:1fr; margin-bottom:60px; }.engagement-options { grid-template-columns:1fr; }.engagement-options article + article { border-left:0; border-top:1px solid rgba(255,255,255,.22); }.service { grid-template-columns:42px 1fr; gap:10px; }.service .tags { grid-column:2; justify-content:flex-start; }.method-intro { margin-bottom:60px; gap:15px; }.method-flow { grid-template-columns:1fr 1fr; gap:45px 15px; }.japan { padding-block:80px; }.time-visual { width:min(90vw,450px); margin:auto; }.closing { padding-block:100px; }.footer { grid-template-columns:1fr 1fr; }.footer p { grid-column:1/-1; }
 }
 @media (min-width: 851px) and (max-height: 850px) {
