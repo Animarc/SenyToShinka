@@ -75,6 +75,19 @@ function App() {
             <h2>{t.servicesTitle}</h2>
             <p>{t.servicesIntro}</p>
           </div>
+          <div className="engagement">
+            <p className="engagement-kicker">{t.engagementKicker}</p>
+            <div className="engagement-options">
+              {t.engagementOptions.map((option, index) => (
+                <article key={option.label}>
+                  <span>{option.label}</span>
+                  <strong>{option.title}</strong>
+                  <p>{option.body}</p>
+                  <i aria-hidden="true">{index === 0 ? '◎' : '＋'}</i>
+                </article>
+              ))}
+            </div>
+          </div>
           <div className="service-list">
             {t.services.map((service) => (
               <article className="service" key={service.number}>

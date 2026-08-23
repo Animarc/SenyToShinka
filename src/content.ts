@@ -13,6 +13,8 @@ type Content = {
   servicesKicker: string
   servicesTitle: string
   servicesIntro: string
+  engagementKicker: string
+  engagementOptions: { label: string; title: string; body: string }[]
   services: { number: string; title: string; body: string; tags: string[] }[]
   methodKicker: string
   methodTitle: string
@@ -42,6 +44,11 @@ export const copy: Record<Language, Content> = {
     servicesKicker: 'Lo que resolvemos',
     servicesTitle: 'De la incertidumbre a una evolución medible.',
     servicesIntro: 'Entramos donde la complejidad, la deuda técnica y el riesgo operativo frenan la evolución.',
+    engagementKicker: 'Una solución a vuestra medida',
+    engagementOptions: [
+      { label: 'Pack integral', title: 'Todo el recorrido, un único equipo.', body: 'Combinamos renovación legacy, auditoría, arquitectura de observabilidad y cobertura SRE en un programa completo de transformación.' },
+      { label: 'Servicios independientes', title: 'Solo lo que necesitáis, cuando lo necesitáis.', body: 'Cada capacidad puede contratarse por separado, con objetivos, alcance y entregables propios, sin necesidad de asumir el programa completo.' },
+    ],
     services: [
       { number: '01', title: 'Renovación de servicios legacy', body: 'Trazamos dependencias y comportamiento real para diseñar una migración incremental, reversible y alineada con el negocio.', tags: ['Discovery', 'Strangler pattern', 'Cloud readiness'] },
       { number: '02', title: 'Auditorías de observabilidad', body: 'Evaluamos señales, cobertura, ruido, tiempos de respuesta y costes. Entregamos prioridades claras y un roadmap ejecutable.', tags: ['Metrics', 'Logs', 'Traces', 'FinOps'] },
@@ -79,6 +86,11 @@ export const copy: Record<Language, Content> = {
     servicesKicker: '解決する課題',
     servicesTitle: '不確実性を、測定可能な進化へ。',
     servicesIntro: '複雑性、技術的負債、運用リスクが変革を妨げている領域に、実践的な支援を提供します。',
+    engagementKicker: 'ニーズに合わせた支援形態',
+    engagementOptions: [
+      { label: '一括支援パッケージ', title: '変革の全工程を、ひとつのチームで。', body: 'レガシー刷新、監査、オブザーバビリティ設計、営業時間外SREを組み合わせ、包括的な変革プログラムとして提供します。' },
+      { label: '個別サービス', title: '必要なものを、必要なタイミングで。', body: '各サービスは個別に契約可能です。包括プログラムを前提とせず、それぞれに明確な目的、範囲、成果物を設定します。' },
+    ],
     services: [
       { number: '01', title: 'レガシーサービスの刷新', body: '依存関係と実際の挙動を把握し、段階的でロールバック可能な移行を設計します。', tags: ['ディスカバリー', '段階的移行', 'クラウド対応'] },
       { number: '02', title: 'オブザーバビリティ監査', body: 'シグナル、カバレッジ、ノイズ、対応時間、コストを評価し、実行可能なロードマップを提示します。', tags: ['メトリクス', 'ログ', 'トレース', 'FinOps'] },
