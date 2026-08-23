@@ -52,11 +52,11 @@ h1 em { font-family:'Playfair Display','Noto Sans JP',serif; color:var(--red); f
 .section-label p { margin:0; }
 .engagement { margin-bottom:90px; }
 .engagement-options { display:grid; grid-template-columns:1fr 1fr; border:1px solid rgba(255,255,255,.22); }
-.engagement-options article { aspect-ratio:1.18; min-height:330px; padding:36px 38px; position:relative; display:flex; flex-direction:column; overflow:hidden; transition:background .25s ease,color .25s ease; }
+.engagement-options article { min-height:350px; padding:36px 38px; position:relative; display:flex; flex-direction:column; overflow:hidden; transition:background .25s ease,color .25s ease; }
 .engagement-options article + article { border-left:1px solid rgba(255,255,255,.22); }
 .engagement-options article > span { color:var(--red); text-transform:uppercase; font-size:10px; letter-spacing:.16em; font-weight:600; }
-.engagement-options strong { max-width:430px; font-size:clamp(28px,3vw,44px); line-height:1.08; font-weight:500; letter-spacing:-.035em; margin:42px 55px 18px 0; }
-.engagement-options p { max-width:470px; font-size:14px; line-height:1.7; opacity:.64; margin:auto 40px 0 0; }
+.engagement-options strong { max-width:430px; font-size:clamp(28px,3vw,44px); line-height:1.08; font-weight:500; letter-spacing:-.035em; margin:38px 55px 0 0; }
+.engagement-options p { max-width:500px; font-size:14px; line-height:1.7; opacity:.64; margin:26px 40px 0 0; }
 .engagement-options i { position:absolute; right:32px; top:30px; color:var(--red); font-style:normal; font-size:28px; }
 .engagement-options article:hover { background:#f2efe8; color:var(--ink); }
 .service-list { border-top:1px solid rgba(255,255,255,.18); }
